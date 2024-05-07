@@ -1,0 +1,38 @@
+:root {
+  --Font: #eeeeeeff;
+  --border: #031926ff;
+  --Backgroun: #cad2c5ff;
+  --light-green: #84a98cff;
+  --medium-green: #0f4b1bff;
+  --dark-green: #1a3720ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px;
+  background-color: var(--light-green);
+}
+nav > ul {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+nav > ul > li {
+    font-size: 1.5pc;
+  padding: 1%;
+  text-align: center;
+  list-style: none;
+  width: 75%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: var(--medium-green);
+  color: var(--Font);
+  border: var(--border) solid 2px;
+  border-radius: 8px;
+}
