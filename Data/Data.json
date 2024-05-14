@@ -1,0 +1,43 @@
+{
+  "skills": ["HTML", "CSS", "JavaScript", "Angular", "Bootstrap", "C#"],
+  "worked with": [
+    "C#",
+    "C",
+    "MVC",
+    "SQL",
+    "MySQL",
+    "Bash",
+    "Bootstrap",
+    "PowerApps",
+    "Angular",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "projects": [
+    {
+      "year": 2024,
+      "title": "Portfolio",
+      "languages": ["HTML", "CSS", "JavaScript"],
+      "image": "img/placeholder.png",
+      "github": "https://github.com/aquos00/portfolio",
+      "site": "#"
+    },
+    {
+      "year": 2024,
+      "title": "Quotes-Box",
+      "languages": ["Angular", "HTML", "CSS", "TypeScript"],
+      "image": "img/placeholder.png",
+      "github": "https://github.com/BastianKind/BastianKind",
+      "site": ""
+    },
+    {
+      "year": 2024,
+      "title": "Memory-Game",
+      "languages": ["HTML", "CSS", "JavaScript"],
+      "image": "img/placeholder.png",
+      "github": "",
+      "site": "https://memoriegamesimple.netlify.app/"
+    }
+  ]
+}
