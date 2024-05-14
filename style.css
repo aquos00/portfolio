@@ -1,19 +1,25 @@
 :root {
   --Font: #eeeeeeff;
   --border: #031926ff;
-  --Backgroun: #cad2c5ff;
+  --Background: #cad2c5ff;
   --light-green: #84a98cff;
   --medium-green: #0f4b1bff;
   --dark-green: #1a3720ff;
 }
 * {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
+body {
+    padding-top: 10px;
+  background-color: var(--Background);
+}
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    width: 100%;
+  position: fixed; /* Apply the sticky positioning */
+  top: 0; /* Stick the element to the top of the viewport */
+  z-index: 100; /* Ensure the navbar is above other content */
   padding: 15px;
   background-color: var(--light-green);
 }
@@ -22,17 +28,100 @@ nav > ul {
   padding-right: 10%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  align-items: center;
 }
 nav > ul > li {
-    font-size: 1.5pc;
+  width: 75%;
+  min-width: fit-content;
   padding: 1%;
   text-align: center;
   list-style: none;
-  width: 75%;
+  text-wrap: nowrap;
   margin-left: 5%;
   margin-right: 5%;
   background-color: var(--medium-green);
-  color: var(--Font);
   border: var(--border) solid 2px;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav > ul > li > a {
+  font-size: 110%;
+  display: block;
+  width: 75%;
+  min-width: 90px;
+  color: var(--Font);
+  transition: all ease-in-out 0.25s;
+}
+nav > ul > li > a:hover {
+  opacity: 0.5;
+}
+#home {
+  display: flex;
+}
+#about-me {
+  display: flex;
+}
+.picture-cont-l, .picture-cont-r {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.portrait_placeholder {
+  margin-top: 10px;
+  max-width: 75%;
+  max-height: 95%;
+  border: var(--border) 2px solid;
+  border-radius: 8px;
+}
+div.text-cont-r {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  padding: 10%;
+  font-size: 1.5pc;
+}
+div.text-cont-l {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 10%;
+  font-size: 1.5pc;
+}
+div.text-cont-up {
+  justify-content: start;
+}
+h1.title {
+  font-size: 4pc;
+  text-decoration: underline;
+  color: var(--border);
+}
+.sub-title,
+.sub-sub-title,
+.sub-sub-sub-title, .site-title {
+  border-radius: 8px;
+  padding: 5px;
+  color: var(--Font);
+  margin: 1%;
+  width: fit-content;
+}
+.sub-title, .site-title {
+  background-color: var(--light-green);
+}
+.sub-sub-title {
+  background-color: var(--medium-green);
+}
+.sub-sub-sub-title {
+  background-color: var(--dark-green);
+}
+h2.site-title {
+  color: var(--border);
 }
