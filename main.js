@@ -5,9 +5,9 @@ let toTopButton = document.getElementById("back-to-top-btn");
 let ScrollVar = 20;
 let count = 0;
 async function getData() {
-  newProject(await (await fetch("Data/data.json")).json());
-  newSkill(await (await fetch("Data/data.json")).json());
-  newWorkedWith(await (await fetch("Data/data.json")).json());
+  newProject(await (await fetch("data.json")).json());
+  newSkill(await (await fetch("data.json")).json());
+  newWorkedWith(await (await fetch("data.json")).json());
 }
 
 getData();
