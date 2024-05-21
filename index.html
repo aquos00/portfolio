@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
     <title>Portfolio - Bastian Kind</title>
@@ -15,13 +15,35 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact me</a></li>
+        <ul id="normal-nav">
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact-me">Contact me</a></li>
         </ul>
+        <div id="burger-nav">
+          <h1>Bastian Kind</h1>
+          <div id="bars" class="bi-list" onclick="switchNav()"></div>
+          <ul id="burger-nav-links" class="hide" onmouseleave="switchNav()">
+            <h3>Navigation</h3>
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact-me">Contact me</a></li>
+            <li>
+              <a href="#home">
+                Beam me up
+                <span class="bi-arrow-up-square r"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
       </nav>
+      <div id="back-to-top-btn">
+        <a href="#home"
+          ><span class="bi-arrow-up-circle" title="Back to the top"></span
+        ></a>
+      </div>
     </header>
     <main>
       <section id="home" class="home">
@@ -48,8 +70,8 @@
             I'm currently absolving an Apprenticeship at Buhler AG
           </p>
           <p class="sub-sub-sub-title">
-            My hobbies are biking, coding, shooting in a club and hanging out
-            with friends
+            My hobbies are motorcycling, programming, shooting club and hanging
+            out with friends
           </p>
           <p class="sub-sub-sub-title">
             I've been interested in tech since 5th grade
@@ -124,16 +146,61 @@
             </div>
           </div>
           <div id="forms-cont">
-            <form action="" method="post">
-              <input type="text" name="Name" id="Name" placeholder="John Doe" required/>
-              <input type="email" name="Email" id="Email" placeholder="John.Doe@gmail.com" required/>
-              <textarea name="textArea" id="Message" cols="30" rows="7" placeholder="Message" required></textarea>
-              <input type="submit" value="Submit">
+            <form action="" method="get">
+              <input
+                type="text"
+                name="Name"
+                id="Name"
+                placeholder="John Doe"
+                required
+              />
+              <input
+                type="email"
+                name="Email"
+                id="Email"
+                placeholder="John.Doe@gmail.com"
+                required
+              />
+              <textarea
+                name="textArea"
+                id="Message"
+                cols="30"
+                rows="7"
+                placeholder="Message"
+                required
+              ></textarea>
+              <input id="submit" type="submit" value="Submit" />
             </form>
           </div>
         </section>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section id="btn-sect">
+        <a href="#home">
+          <span class="bi-arrow-up-square"></span>
+          <button id="footer-back-to-top">Back to the top</button>
+          <span class="bi-arrow-up-square"></span>
+        </a>
+      </section>
+      <section id="credits-sect">
+        <h2>
+          &copy;
+          <a href="https://github.com/aquos00" target="_blank">Aquos00</a> 2024
+        </h2>
+      </section>
+      <hr />
+      <section id="footer-icon-cont">
+        <a href="https://www.linkedin.com/in/bastian-kind/" target="_blank">
+          <span class="bi-linkedin small"></span>
+        </a>
+        <a href="mailto:bastian.kind@bluewin.ch" target="_blank">
+          <span class="bi-envelope-fill small"></span>
+        </a>
+        <a href="https://github.com/BastianKind" target="_blank">
+          <span class="bi-github small"></span>
+        </a>
+      </section>
+    </footer>
   </body>
 </html>

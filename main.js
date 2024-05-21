@@ -1,6 +1,8 @@
 let projectContainer = document.getElementById("project-container");
 let skillContainer = document.getElementById("skill-container");
 let workedWithContainer = document.getElementById("worked-container");
+let toTopButton = document.getElementById("back-to-top-btn");
+let ScrollVar = 20;
 let count = 0;
 async function getData() {
   newProject(await (await fetch("Data/data.json")).json());
@@ -81,7 +83,6 @@ function newProject(data) {
 function newSkill(data){
     i = 0;
     data["skills"].forEach((skill)=> {
-        console.log(skill);
         newSkill = document.createElement("h6");
         newSkill.innerText = skill;
         skillContainer.appendChild(newSkill);
@@ -90,9 +91,24 @@ function newSkill(data){
 function newWorkedWith(data){
     i = 0;
     data["worked with"].forEach((skill)=> {
-        console.log(skill);
         newWorkedWith = document.createElement("h6");
         newWorkedWith.innerText = skill;
         workedWithContainer.appendChild(newWorkedWith);
     });
+}
+
+window.onscroll = function() {scrolled()};
+
+function scrolled() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    toTopButton.style.display = "block";
+  }
+  else {
+    toTopButton.style.display = "none";
+  }
+}
+
+function switchNav() {
+  let burgerNav = document.getElementById("burger-nav-links");
+  burgerNav.classList.toggle("hide");
 }
