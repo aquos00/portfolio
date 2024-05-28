@@ -230,10 +230,13 @@ h2.site-title {
 }
 hr {
   border-radius: 8px;
-  opacity: 0.5;
+  opacity: 0;
   height: 5px;
   background-color: var(--border);
   border: none;
+}
+#shown-hr{
+  opacity: 0.5;
 }
 .site-description {
   margin: 1%;
@@ -326,6 +329,8 @@ h6 {
   height: auto;
   width: auto;
   max-width: 100%;
+  border: var(--border) 1.5px dashed;
+  border-radius: 8px;
 }
 .languageCont {
   width: 100%;
@@ -376,6 +381,9 @@ h6 {
   opacity: 0.5;
 }
 /*Contact me //////////////////////////////////////*/
+.h-captcha {
+  margin-left: 5%;
+}
 #contact-forms {
   display: flex;
 }
@@ -426,17 +434,17 @@ h6 {
   color: var(--medium-green);
 }
 input,
-textarea {
+textarea,
+#submmit {
   background-color: var(--medium-green);
   color: var(--Font);
   border: var(--border) 2px solid;
   border-radius: 8px;
   height: fit-content;
-  width: 100px;
   font-size: 1.5em;
   padding: 1%;
   margin: 5%;
-  width: 80%;
+  width: 80% !important;
   transition: all 0.25s ease-in-out;
 }
 input:focus,
@@ -618,6 +626,7 @@ a:hover {
 }
 @media screen and (width < 750px) {
   #home {
+    margin-top: 7.5%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -645,6 +654,20 @@ a:hover {
   }
 }
 @media screen and (width < 700px) {
+  .h-captcha {
+    margin-left: 0;
+  }
+  #normal-nav {
+    display: none;
+  }
+  #burger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10%;
+    padding-left: 5%;
+  }
+
   .project img {
     height: 250px;
   }
@@ -673,21 +696,108 @@ a:hover {
   }
 }
 @media screen and (width < 575px) {
+  .project {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+  .project .img-cont {
+    padding-left: 10%;
+    margin: 0;
+    align-items: start;
+    justify-content: start;
+    width: fit-content;
+  }
   .project img {
     height: 200px;
   }
   .project {
-    width: 60%;
+    width: fit-content;
   }
   .languageCont h6 {
     margin-left: 0;
   }
-  .languageCont, .project > h6 {
+  .languageCont,
+  .project > h6 {
     width: fit-content;
     margin-left: 10%;
   }
   .btn-container {
+    width: 90%;
+    padding-left: 10%;
+  }
+  #worked-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  #skill-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  h1.title {
+    font-size: 1.25em;
+  }
+  .sub-title,
+  .sub-sub-title,
+  .sub-sub-sub-title,
+  .site-description {
+    font-size: 0.75em;
+  }
+  .site-title,
+  h6 {
+    font-size: 1em;
+  }
+  .btn-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-container > a {
     width: 80%;
+  }
+  .img-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project * {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+@media screen and (width < 500px) {
+}
+@media screen and (width < 450px) {
+  .project {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+  .project .img-cont {
+    padding-left: 10%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+  .project img {
+    height: 200px;
+  }
+  .project {
+    width: fit-content;
+  }
+  .languageCont h6 {
+    margin-left: 0;
+  }
+  .languageCont,
+  .project > h6 {
+    width: fit-content;
+    margin-left: 10%;
+  }
+  .languageCont {
+    width: 90%;
+  }
+  .btn-container {
+    width: 100%;
   }
   #worked-container {
     grid-template-columns: 1fr 1fr;
@@ -725,47 +835,6 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-}
-@media screen and (width < 500px) {
-  #normal-nav {
-    display: none;
-  }
-  #burger-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 10%;
-    padding-left: 5%;
-  }
-}
-@media screen and (width < 400px) {
-  .project img {
-    width: 100%;
-    max-width: none;
-    height: auto;
-    max-height: none;
-  }
-  #Email {
-    height: 25%;
-  }
-
-  .project img {
-    height: 200px;
-    width: fit-content;
-  }
-  .project {
-    width: 60%;
-  }
-  .languageCont h6 {
-    margin-left: 0;
-  }
-  .languageCont, .project > h6 {
-    width: fit-content;
-    margin-left: 0;
-  }
-  .btn-container {
-    width: 100%;
   }
 }
 

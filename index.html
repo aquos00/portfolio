@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <title>Portfolio - Bastian Kind</title>
-    <link rel="shortcut icon" href="img/favicon.ico?" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
@@ -115,10 +116,10 @@
         <section id="contact-forms">
           <div id="socials-cont">
             <div class="social" id="mail">
-              <a href="mailto:bastian.kind@bluewin.ch" target="_blank">
+              <a href="mailto:grisu.kind@gmail.com" target="_blank">
                 <span class="bi-envelope-fill"></span>
               </a>
-              <a href="mailto:bastian.kind@bluewin.ch" target="_blank">
+              <a href="mailto:grisu.kind@gmail.com" target="_blank">
                 <h4 class="sub-sub-sub-title">E-Mail</h4>
               </a>
             </div>
@@ -146,7 +147,13 @@
             </div>
           </div>
           <div id="forms-cont">
-            <form action="" method="get">
+            <form action="https://api.web3forms.com/submit" method="post" id="form">
+              <input
+                type="hidden"
+                name="access_key"
+                value="4f39b1d6-c1a6-4f40-b5de-dc8600f084e5"
+              />
+
               <input
                 type="text"
                 name="Name"
@@ -157,25 +164,31 @@
               <input
                 type="email"
                 name="Email"
-                id="Email"
+                id="E-mail"
                 placeholder="John.Doe@gmail.com"
                 required
               />
               <textarea
-                name="textArea"
+                name="Message"
                 id="Message"
                 cols="30"
                 rows="7"
                 placeholder="Message"
                 required
               ></textarea>
+              <div
+                class="h-captcha"
+                data-captcha="true"
+                data-theme="dark"
+              ></div>
+
               <input id="submit" type="submit" value="Submit" />
             </form>
           </div>
         </section>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <section id="btn-sect">
         <a href="#home">
           <span class="bi-arrow-up-square"></span>
@@ -189,12 +202,12 @@
           <a href="https://github.com/aquos00" target="_blank">Aquos00</a> 2024
         </h2>
       </section>
-      <hr />
+      <hr id="shown-hr"/>
       <section id="footer-icon-cont">
         <a href="https://www.linkedin.com/in/bastian-kind/" target="_blank">
           <span class="bi-linkedin small"></span>
         </a>
-        <a href="mailto:bastian.kind@bluewin.ch" target="_blank">
+        <a href="mailto:grisu.kind@gmail.com" target="_blank">
           <span class="bi-envelope-fill small"></span>
         </a>
         <a href="https://github.com/BastianKind" target="_blank">

@@ -19,7 +19,7 @@
       "year": 2024,
       "title": "Portfolio",
       "languages": ["HTML", "CSS", "JavaScript"],
-      "image": "img/placeholder.png",
+      "image": "img/portfolio.png",
       "github": "https://github.com/aquos00/portfolio",
       "site": "#"
     },
@@ -28,14 +28,14 @@
       "title": "Quotes-Box",
       "languages": ["Angular", "HTML", "CSS", "TypeScript"],
       "image": "img/placeholder.png",
-      "github": "https://github.com/BastianKind/BastianKind",
+      "github": "",
       "site": ""
     },
     {
       "year": 2024,
       "title": "Memory-Game",
       "languages": ["HTML", "CSS", "JavaScript"],
-      "image": "img/placeholder.png",
+      "image": "img/memorieGame.png",
       "github": "",
       "site": "https://memoriegamesimple.netlify.app/"
     }

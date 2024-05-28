@@ -1,3 +1,9 @@
+console.log(
+  `Hey! You sneaky developer... 
+I'm glad you liked the site and want to see whats going on, so be sure to check the repository at:
+https://github.com/aquos00/portfolio
+And don't steal my code ;)
+`);
 let projectContainer = document.getElementById("project-container");
 let skillContainer = document.getElementById("skill-container");
 let workedWithContainer = document.getElementById("worked-container");
@@ -40,7 +46,7 @@ function newProject(data) {
     } else {
       newElmGithubBtn.classList.add("btn");
       newElmGithubBtn.classList.add("btn-secondary");
-      newElmGithubBtn.title="No GitHub repository for this project";
+      newElmGithubBtn.title = "No GitHub repository for this project";
     }
 
     newElmGitHubLink.appendChild(newElmGithubBtn);
@@ -80,30 +86,38 @@ function newProject(data) {
     count++;
   });
 }
-function newSkill(data){
-    i = 0;
-    data["skills"].forEach((skill)=> {
-        newSkill = document.createElement("h6");
-        newSkill.innerText = skill;
-        skillContainer.appendChild(newSkill);
-    });
+function newSkill(data) {
+  i = 0;
+  data["skills"].forEach((skill) => {
+    newSkill = document.createElement("h6");
+    newSkill.innerText = skill;
+    skillContainer.appendChild(newSkill);
+  });
 }
-function newWorkedWith(data){
-    i = 0;
-    data["worked with"].forEach((skill)=> {
-        newWorkedWith = document.createElement("h6");
-        newWorkedWith.innerText = skill;
-        workedWithContainer.appendChild(newWorkedWith);
-    });
+function newWorkedWith(data) {
+  i = 0;
+  data["worked with"].forEach((skill) => {
+    newWorkedWith = document.createElement("h6");
+    newWorkedWith.innerText = skill;
+    workedWithContainer.appendChild(newWorkedWith);
+  });
 }
 
-window.onscroll = function() {scrolled()};
+window.onscroll = function () { scrolled() };
 
 function scrolled() {
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+  let homeHeight = document.getElementById("home").offsetHeight;
+  let footerTop = document.getElementById("footer").offsetTop;
+  let footerHeight = document.getElementById("footer").offsetHeight;
+  let height = homeHeight * 0.9;
+  let endHeight = footerTop - footerHeight * 2;
+  if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
     toTopButton.style.display = "block";
   }
   else {
+    toTopButton.style.display = "none";
+  }
+  if (document.body.scrollTop > endHeight || document.documentElement.scrollTop > endHeight) {
     toTopButton.style.display = "none";
   }
 }
@@ -112,3 +126,23 @@ function switchNav() {
   let burgerNav = document.getElementById("burger-nav-links");
   burgerNav.classList.toggle("hide");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.querySelector('form');
+
+  form.addEventListener('submit', function (event) {
+    // Check if hcaptcha is not completed
+    if (window.hcaptcha && !hcaptcha.getResponse()) {
+      event.preventDefault(); // Prevent form submission
+      alert('Please complete the captcha verification.'); // Alert the user
+    }
+    // If captcha is completed, the form will submit normally
+
+  });
+});
+
+
+window.onload = function() {
+  // Reset the form fields when the page loads
+  document.getElementById("form").reset();
+};
