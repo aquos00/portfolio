@@ -869,3 +869,9 @@ a:hover {
     display: inline;
   }
 }
+textarea::-webkit-scrollbar {
+  display: inline;
+}
+textarea::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
