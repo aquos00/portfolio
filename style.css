@@ -112,7 +112,6 @@ nav > ul > li > a:hover {
   background-color: var(--footer-bg);
   position: fixed;
   right: 40px;
-  top: 49px;
   border-radius: 0 0 8px 8px;
 }
 li > a > span.bi-arrow-up-square.r {
@@ -666,6 +665,10 @@ a:hover {
     align-items: center;
     padding-right: 10%;
     padding-left: 5%;
+  }
+  #burger-nav-links a {
+    display: block;
+    width: 100%;
   }
 
   .project img {

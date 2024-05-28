@@ -122,6 +122,16 @@ function scrolled() {
   }
 }
 
+window.onresize = function() { rezised() };
+
+function rezised() {
+  let burgerNavLinks = document.getElementById("burger-nav-links");
+  let navHeight = document.getElementById("nav").offsetHeight - 1;
+  burgerNavLinks.style.top = navHeight + 'px';
+}
+
+rezised();
+
 function switchNav() {
   let burgerNav = document.getElementById("burger-nav-links");
   burgerNav.classList.toggle("hide");
