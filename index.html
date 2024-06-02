@@ -7,7 +7,7 @@
     <script src="main.js" defer></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <title>Portfolio - Bastian Kind</title>
-    <link rel="shortcut icon" href="img/favicon.ico?" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico?" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
@@ -44,7 +44,7 @@
       <section id="home" class="home">
         <div class="picture-cont-l">
           <img
-            src="img/placeholder_portrait.png"
+            src="img/BKind_Pic.png"
             alt="placeholder portrait"
             class="portrait_placeholder"
           />
@@ -73,11 +73,10 @@
           </p>
         </div>
         <div class="picture-cont-r">
-          <img
-            src="img/placeholder_portrait.png"
-            alt="placeholder portrait"
-            class="portrait_placeholder"
-          />
+          <video controls class="portrait_placeholder">
+            <source src="videos/video.mp4" type="video/mp4" />
+            Your browser does not support the video.
+          </video>
         </div>
       </section>
       <hr />
@@ -109,14 +108,7 @@
         </div>
         <section id="contact-forms">
           <div id="socials-cont">
-            <div class="social" id="mail">
-              <a href="mailto:grisu.kind@gmail.com" target="_blank">
-                <span class="bi-envelope-fill"></span>
-              </a>
-              <a href="mailto:grisu.kind@gmail.com" target="_blank">
-                <h4 class="sub-sub-sub-title">E-Mail</h4>
-              </a>
-            </div>
+            <!--Habe die E-Mail entfernt da ich diese nicht preis geben will-->
             <div class="social" id="linkedin">
               <a
                 href="https://www.linkedin.com/in/bastian-kind/"
@@ -141,7 +133,11 @@
             </div>
           </div>
           <div id="forms-cont">
-            <form action="https://api.web3forms.com/submit" method="post" id="form">
+            <form
+              action="https://api.web3forms.com/submit"
+              method="post"
+              id="form"
+            >
               <input
                 type="hidden"
                 name="access_key"
@@ -196,13 +192,10 @@
           <a href="https://github.com/aquos00" target="_blank">Aquos00</a> 2024
         </h2>
       </section>
-      <hr id="shown-hr"/>
+      <hr id="shown-hr" />
       <section id="footer-icon-cont">
         <a href="https://www.linkedin.com/in/bastian-kind/" target="_blank">
           <span class="bi-linkedin small"></span>
-        </a>
-        <a href="mailto:grisu.kind@gmail.com" target="_blank">
-          <span class="bi-envelope-fill small"></span>
         </a>
         <a href="https://github.com/BastianKind" target="_blank">
           <span class="bi-github small"></span>
