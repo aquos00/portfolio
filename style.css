@@ -1,4 +1,15 @@
 :root {
+  /*Ich habe das Farbschema angepasst da ich die 
+  original Farben doch nicht so schön fande*/
+  --Font: #eeeeeeff;
+  --border: #031926ff;
+  --Background: rgb(232, 227, 227);
+  --light-green: rgb(136, 183, 147);
+  --medium-green: rgb(40, 100, 52);
+  --dark-green: rgb(44, 70, 49);
+  --footer-font: #454545;
+  --footer-bg: #818181;
+  /*
   --Font: #eeeeeeff;
   --border: #031926ff;
   --Background: #cad2c5ff;
@@ -6,7 +17,7 @@
   --medium-green: #0f4b1bff;
   --dark-green: #1a3720ff;
   --footer-font: #454545;
-  --footer-bg: #818181;
+  --footer-bg: #818181;*/
 }
 * {
   font-family: Arial, Helvetica, sans-serif;
