@@ -10,7 +10,7 @@ let workedWithContainer = document.getElementById("worked-container");
 let toTopButton = document.getElementById("back-to-top-btn");
 let portrait = document.getElementById("portrait-pic");
 
-portrait.src = "img/BKind_Pic.png";
+portrait.src = "img/bKind_Pic.png";
 
 let ScrollVar = 20;
 let count = 0;
