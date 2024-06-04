@@ -8,6 +8,10 @@ let projectContainer = document.getElementById("project-container");
 let skillContainer = document.getElementById("skill-container");
 let workedWithContainer = document.getElementById("worked-container");
 let toTopButton = document.getElementById("back-to-top-btn");
+let portrait = document.getElementById("portrait-pic");
+
+portrait.src = "img/bKind_Pic.png";
+
 let ScrollVar = 20;
 let count = 0;
 async function getData() {
